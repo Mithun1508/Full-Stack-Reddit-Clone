@@ -1,0 +1,15 @@
+.idea/
+node_modules/
+build/
+tmp/
+temp/
+
+# Env
+/**/*.env
+/**/*.env.production
+
+# Public Directory
+public/
+
+# Deployment Script
+deploy.sh

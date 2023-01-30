@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker build -t <DOCKERHUB_USERNAME>/api-reddit-clone-readit:latest .
+docker push <DOCKERHUB_USERNAME>/api-reddit-clone-readit:latest
+ssh <USERNAME>@<HOST> "docker pull <DOCKERHUB_USERNAME>/api-reddit-clone-readit:latest && docker tag <DOCKERHUB_USERNAME>/api-reddit-clone-readit:latest dokku/api-reddit-clone-readit:latest && dokku tags:deploy api-reddit-clone-readit latest"
